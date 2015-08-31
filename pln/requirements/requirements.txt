@@ -1,5 +1,2 @@
-# requirements.txt
-#
-# pip install requirements.txt
-
 Django==1.8.4
+Unipath==1.1
