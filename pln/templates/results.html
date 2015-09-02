@@ -1,6 +1,24 @@
 <!-- results.html -->
 
 <h1>Results</h1>
-<div>selected options</div>
-<div>search</div>
-<div>results grid</div>
+<div>selected options go here</div>
+<div>search will go here</div>
+
+{% for tool in tools %}
+    <div class="a bunch of attributes">
+        <h2>{{ tool.name }}</h2>
+        <img src="{{ tool.icon }}" />
+        <p>{{ tool.description }}</p>
+        <table>
+            <tr>
+                <td>Website</td>
+                <td><a href="">{{ tool.url }}</a></td>
+            </tr>
+            <tr>
+                <td>Application</td>
+                <!--td>{% for application in tool.appliction %} {{ application }} {% endfor %}</td-->
+            </tr>
+        </table>
+    </div>
+{% endfor %}
+

@@ -1,4 +1,9 @@
 <!-- filter.html -->
 
 <h1>Filter</h1>
-<div>iterate over properties</div>
+{% for attribute in tool_attributes %}
+    <h3>{{ attribute.name }}</h3>
+    {% for type in attribute.types %}
+       <div><input type="checkbox">{{ type.category }}</input></div>
+    {% endfor %}
+{% endfor %}
